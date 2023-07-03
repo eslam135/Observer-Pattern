@@ -11,7 +11,7 @@ public class Main {
 
         newsAgency.setNews("Breaking news!");
 
-        System.out.println(observer1.getNews());
+        System.out.println(observer1.getNews()); // Output: Breaking news!
         newsAgency.setNews("Breaking news!2");
         System.out.println(observer2.getNews()); // Output: Breaking news!2
     }
