@@ -56,3 +56,5 @@ Each observer, upon receiving the update notification, can perform actions based
     | +update()      |
     | +getNews()     |
     +----------------+
+# Next Patter:
+https://github.com/eslam135/Decorator-Pattern
