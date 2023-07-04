@@ -27,3 +27,32 @@ When the state of the subject changes, it needs to notify all the registered obs
 
 ### <span style="color:lightgrey"> 5- Observers react to state changes:
 Each observer, upon receiving the update notification, can perform actions based on the updated state of the subject. The specific actions taken by observers will depend on the requirements of the application.
+
+    +----------------------+               +----------------------------+
+    |   Subject            |<>-------------|   NewsAgency               |
+    +----------------------+               +----------------------------+
+    |                      |               | -observers: List<Observer> |
+    | +registerObserver()  |               | -news: String              |
+    | +unregisterObserver()|               | +setNews()                 |
+    | +notifyObservers()   |               +----------------------------+
+    |                      |
+    +----------------------+
+              ^
+              |
+              |
+    +----------------+
+    |    Observer    |
+    +----------------+
+    | +update()      |
+    |                |
+    +----------------+
+              ^
+              |
+              |
+    +----------------+
+    |  NewsChannel   |
+    +----------------+
+    | -news: String  |
+    | +update()      |
+    | +getNews()     |
+    +----------------+
